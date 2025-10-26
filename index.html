@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Draw2Diagram - AI Drawing Assistant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Default (Light) Theme Tooltip Styles */
+      [data-tooltip] {
+        position: relative;
+      }
+      [data-tooltip]::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        bottom: 125%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #f3f4f6; /* light gray */
+        color: #1f2937; /* dark gray */
+        border: 1px solid #d1d5db;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 12px;
+        white-space: nowrap;
+        z-index: 100;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity 0.2s;
+      }
+      [data-tooltip]:hover::after {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      /* Dark Theme Tooltip Styles */
+      html.dark [data-tooltip]::after {
+        background-color: #1f2937; /* dark gray */
+        color: #fff;
+        border-color: transparent;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.25.0",
+    "react-zoom-pan-pinch": "https://aistudiocdn.com/react-zoom-pan-pinch@^3.7.0",
+    "react-icons/lu": "https://esm.sh/react-icons@5.2.1/lu",
+    "react-icons/": "https://aistudiocdn.com/react-icons@^5.5.0/",
+    "d3-geo": "https://esm.sh/d3-geo@3",
+    "topojson-client": "https://esm.sh/topojson-client@3"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

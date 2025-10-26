@@ -1,0 +1,5 @@
+{
+  "name": "Copy of Draw2Diagram",
+  "description": "An AI-powered collaborative drawing assistant where users can sketch diagrams (circuits, block diagrams, flowcharts, etc.) and chat with the AI to modify or beautify them.",
+  "requestFramePermissions": []
+}
